@@ -1,0 +1,922 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="The 6x1 Method for clothing brands: one audience, one message, one offer, one product, one traffic source, for one year. Score your brand and find your weakest link.">
+</head>
+<body>
+<title>The 6x1 Method — BitBranding</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
+:root{
+  --slate:#506E7A; --slate-d:#3d545e; --slate-dd:#2b3d45;
+  --bronze:#B88057; --bronze-d:#9a6941;
+  --sage:#A5A58E; --cream:#E8DBB2; --blue:#C0D7E1; --grey:#EBECED;
+  --ink:#20323A; --muted:#5c6b72; --paper:#F4F6F6; --card:#ffffff;
+}
+*{box-sizing:border-box}
+.x61{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--paper);
+  line-height:1.6;-webkit-font-smoothing:antialiased;font-weight:400;
+  font-feature-settings:"cv11","ss01";}
+.x61 h1,.x61 h2,.x61 h3,.x61 p,.x61 ol,.x61 li{margin:0}
+.x61 a{color:inherit;text-decoration:none}
+.wrap{max-width:1060px;margin-inline:auto;padding-inline:clamp(20px,5vw,44px)}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--sage)}
+
+/* topbar */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(43,61,69,.92);
+  backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid rgba(255,255,255,.08)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+.topbar .method{color:var(--cream)}
+.wm{font-weight:800;font-size:18px;letter-spacing:-.01em;color:var(--slate)}
+.wm span{color:var(--bronze)}
+.wm-img{height:32px;width:auto;display:block}
+.wm-img-foot{height:26px;width:auto;display:block}
+.topbar .method{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--sage)}
+@media(max-width:560px){.topbar .method{display:none}}
+
+/* hero */
+.hero{background:var(--slate);color:#fff;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;
+  background:repeating-linear-gradient(115deg,rgba(255,255,255,.025) 0 1px,transparent 1px 9px)}
+.hero::after{content:"";position:absolute;right:-140px;top:-120px;width:460px;height:460px;
+  border-radius:50%;background:radial-gradient(circle,rgba(232,219,178,.16),transparent 70%)}
+.hero .wrap{padding-top:clamp(48px,7vw,84px);padding-bottom:clamp(52px,7vw,88px);position:relative;z-index:2}
+.hero-ghost{position:absolute;right:-.06em;bottom:-.24em;z-index:1;font-weight:900;line-height:1;
+  font-size:clamp(200px,34vw,480px);letter-spacing:-.05em;color:transparent;
+  -webkit-text-stroke:2px rgba(232,219,178,.13);pointer-events:none;user-select:none}
+.side-label{position:absolute;right:26px;top:50%;z-index:2;transform:rotate(90deg) translateX(-50%);
+  transform-origin:right top;font-size:10px;font-weight:700;letter-spacing:.34em;text-transform:uppercase;
+  color:rgba(192,215,225,.55);white-space:nowrap}
+@media(max-width:900px){.side-label{display:none}}
+@keyframes heroUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:no-preference){
+  .hero .wrap>*{opacity:0;animation:heroUp .6s cubic-bezier(.2,.7,.2,1) forwards}
+  .hero .wrap>*:nth-child(1){animation-delay:.05s}
+  .hero .wrap>*:nth-child(2){animation-delay:.15s}
+  .hero .wrap>*:nth-child(3){animation-delay:.28s}
+  .hero .wrap>*:nth-child(4){animation-delay:.38s}
+  .hero .wrap>*:nth-child(5){animation-delay:.46s}
+  .hero .wrap>*:nth-child(6){animation-delay:.56s}
+}
+
+/* marquee */
+.marquee{background:var(--cream);overflow:hidden;border-bottom:1px solid #ddd0a4}
+.marquee-track{display:flex;align-items:center;gap:26px;width:max-content;padding:11px 0;
+  animation:mq 32s linear infinite}
+.marquee-track span{font-size:11.5px;font-weight:800;letter-spacing:.3em;text-transform:uppercase;
+  color:var(--bronze-d);white-space:nowrap}
+.marquee-track i{color:var(--sage);font-style:normal;font-size:10px}
+@keyframes mq{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.marquee-track{animation:none}}
+.hero .eyebrow{color:var(--cream)}
+.h-title{font-weight:900;letter-spacing:-.03em;line-height:.94;
+  font-size:clamp(46px,9vw,92px);margin-top:16px;text-wrap:balance}
+.h-title .tm{font-size:.32em;vertical-align:super;font-weight:700;color:var(--cream);letter-spacing:0}
+.h-sub{font-weight:800;font-size:clamp(22px,3.4vw,32px);color:var(--blue);margin-top:18px;letter-spacing:-.01em}
+.h-rule{height:4px;width:92px;background:var(--bronze);border-radius:3px;margin:26px 0}
+.h-tag{font-weight:500;font-size:clamp(16px,2vw,19px);color:#e3ebee;max-width:34em}
+.proof{margin-top:34px;display:inline-flex;flex-direction:column;gap:6px;
+  background:rgba(255,255,255,.08);border-left:4px solid var(--bronze);
+  border-radius:10px;padding:20px 26px}
+.proof .big{font-weight:900;font-size:clamp(24px,4vw,34px);letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+.proof .big em{color:var(--bronze);font-style:normal;font-weight:700;padding:0 .18em}
+.proof .cap{font-weight:500;font-size:13.5px;color:var(--blue);max-width:40em}
+
+/* path index */
+.pathwrap{background:var(--slate-dd)}
+.path{display:flex;gap:10px;overflow-x:auto;padding:13px 0;scrollbar-width:thin}
+.chip{flex:0 0 auto;display:inline-flex;align-items:baseline;gap:8px;color:#eef4f6;
+  padding:8px 14px;font-weight:600;font-size:13px;white-space:nowrap;letter-spacing:.02em;
+  background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.28);border-radius:999px;
+  transition:background .15s,border-color .15s}
+.chip:hover{background:rgba(184,128,87,.35);border-color:var(--bronze)}
+.chip-n{font-weight:800;color:var(--bronze);font-variant-numeric:tabular-nums;font-size:11px}
+@media(max-width:700px){
+  .path{display:grid;grid-template-columns:1fr 1fr;gap:9px;overflow:visible;padding:14px 0}
+  .chip{border-radius:10px;justify-content:flex-start}
+  .chip:active{background:rgba(184,128,87,.4)}
+}
+
+/* intro strip */
+.intro .wrap{padding:clamp(40px,6vw,64px) clamp(20px,5vw,44px) clamp(6px,2vw,10px)}
+.intro h2{font-weight:800;font-size:clamp(24px,3.6vw,34px);letter-spacing:-.01em;color:var(--slate);
+  max-width:16em;text-wrap:balance}
+.intro p{margin-top:14px;color:var(--muted);font-size:17px;max-width:40em}
+
+/* pillars */
+.pillars{padding:0}
+.pillar{background:var(--card);position:relative;overflow:hidden;
+  padding:clamp(40px,6vw,72px) 0;border-top:1px solid #e6e9e9}
+.pillar.alt{background:#faf6ec;border-top-color:#efe6cf}
+.pillar .wrap{position:relative;z-index:1}
+.p-ghost{position:absolute;top:-.12em;right:-.04em;z-index:0;font-weight:900;line-height:1;
+  font-size:clamp(140px,22vw,300px);letter-spacing:-.06em;color:transparent;
+  -webkit-text-stroke:2px rgba(184,128,87,.14);font-variant-numeric:tabular-nums;
+  pointer-events:none;user-select:none}
+.pillar.alt .p-ghost{-webkit-text-stroke-color:rgba(184,128,87,.18)}
+.reveal{opacity:0;transform:translateY(14px)}
+.reveal.in{opacity:1;transform:none;transition:opacity .5s ease,transform .5s ease}
+.p-head{display:flex;align-items:baseline;gap:clamp(14px,2.4vw,26px)}
+.p-num{font-weight:900;font-size:clamp(40px,6vw,66px);line-height:.8;color:var(--bronze);
+  font-variant-numeric:tabular-nums;letter-spacing:-.03em}
+.p-q{font-weight:800;font-size:clamp(21px,3vw,30px);color:var(--slate);letter-spacing:-.01em;
+  margin-top:6px;text-wrap:balance}
+.p-grid{display:grid;grid-template-columns:1.45fr 1fr;gap:clamp(20px,3vw,38px);margin-top:24px}
+@media(max-width:760px){.p-grid{grid-template-columns:1fr;gap:22px}}
+.p-what{font-size:17.5px;font-weight:500;color:#334046;max-width:34em}
+.p-howlabel{margin-top:22px;font-size:12px;font-weight:800;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--bronze)}
+.p-how{list-style:none;counter-reset:s;margin-top:14px;display:flex;flex-direction:column;gap:12px}
+.p-how li{counter-increment:s;position:relative;padding-left:40px;font-size:15px;color:#3a474d}
+.p-how li::before{content:counter(s,decimal-leading-zero);position:absolute;left:0;top:-1px;
+  font-weight:800;font-size:13px;color:var(--slate);background:var(--grey);
+  width:27px;height:27px;border-radius:7px;display:grid;place-items:center;
+  font-variant-numeric:tabular-nums}
+.p-side{display:flex;flex-direction:column;gap:12px}
+.callout{border-radius:12px;padding:15px 17px}
+.c-img{width:100%;height:auto;display:block;border-radius:8px;margin-bottom:12px}
+.callout p{font-size:13.5px;color:#3f4c52;margin-top:5px;font-weight:500}
+.c-label{font-size:10.5px;font-weight:800;letter-spacing:.13em;text-transform:uppercase}
+.callout.apparel{background:#eaf3f7;border:1px solid #d3e4ec}
+.callout.apparel .c-label{color:var(--slate)}
+.callout.wild{background:#f3ecd8;border:1px solid #e7dabb}
+.callout.wild .c-label{color:var(--bronze-d)}
+.callout.signal{background:#eef0ec;border:1px solid #e0e3da}
+.callout.signal .c-label{color:#7d7d63}
+
+/* diagnostic */
+.diag{background:var(--slate);color:#fff;margin-top:34px}
+.diag .wrap{padding:clamp(46px,6vw,72px) clamp(20px,5vw,44px)}
+.diag .eyebrow{color:var(--cream)}
+.diag h2{font-weight:900;font-size:clamp(28px,4.4vw,40px);letter-spacing:-.02em;margin-top:12px;
+  text-wrap:balance;max-width:14em}
+.diag .lede{color:#d7e2e6;font-weight:500;font-size:16.5px;margin-top:12px;max-width:40em}
+.d-anchor{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--blue);margin:26px 0 10px;display:flex;justify-content:space-between}
+.d-rows{display:flex;flex-direction:column;gap:10px}
+.d-row{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:12px;
+  padding:12px 16px}
+.d-label{font-weight:700;font-size:16px;display:flex;align-items:center;gap:11px}
+.d-num{font-weight:800;color:var(--cream);font-variant-numeric:tabular-nums;font-size:14px}
+.d-scale{display:flex;gap:7px}
+.score{width:42px;height:42px;border-radius:9px;border:1.5px solid rgba(255,255,255,.28);
+  background:transparent;color:#eaf0f1;font-family:inherit;font-weight:700;font-size:15px;
+  cursor:pointer;font-variant-numeric:tabular-nums;transition:background .13s,transform .13s,border-color .13s}
+.score:hover{border-color:var(--cream);transform:translateY(-1px)}
+.score[aria-pressed="true"]{background:var(--bronze);border-color:var(--bronze);color:#fff}
+.scalehint{display:flex;justify-content:space-between;font-size:11.5px;color:#9fb4bc;margin-top:6px;
+  max-width:640px;margin-left:auto}
+@media(max-width:620px){.d-row{flex-direction:column;align-items:flex-start}.scalehint{margin-left:0}}
+
+/* result */
+.result{margin-top:26px;background:var(--card);color:var(--ink);border-radius:16px;
+  padding:clamp(22px,3vw,32px);border-top:5px solid var(--bronze)}
+.result.hidden{display:none}
+.result .r-eye{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--bronze)}
+.result .r-link{font-weight:900;font-size:clamp(26px,4vw,36px);color:var(--slate);letter-spacing:-.01em;margin-top:6px}
+.result .r-action{font-size:16px;color:#3a474d;margin-top:12px;max-width:44em;font-weight:500}
+.r-meter{margin-top:22px}
+.r-scorine{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;row-gap:8px}
+.r-num{font-weight:900;font-size:30px;color:var(--ink);font-variant-numeric:tabular-nums}
+.r-of{color:var(--muted);font-weight:600;white-space:nowrap}
+.r-state{margin-left:auto;font-weight:700;font-size:14px;padding:5px 12px;border-radius:999px;
+  background:var(--grey);color:var(--slate)}
+.r-bar{height:9px;border-radius:6px;background:var(--grey);margin-top:10px;overflow:hidden}
+.r-fill{height:100%;width:0;background:linear-gradient(90deg,var(--bronze),#d09e6f);
+  border-radius:6px;transition:width .5s ease}
+.cta{margin-top:22px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.btn{display:inline-block;text-align:center;background:var(--bronze);color:#fff;font-weight:700;font-size:15.5px;padding:14px 24px;
+  border-radius:10px;border:none;cursor:pointer;font-family:inherit;transition:background .15s,transform .15s}
+.btn:hover{background:var(--bronze-d);transform:translateY(-1px)}
+.cta small{color:var(--muted);font-size:13px}
+.hint{color:#bcccd2;font-size:14px;font-weight:600;margin-top:20px}
+.hint.gone{display:none}
+
+/* footer */
+.site-foot{background:var(--slate-dd);color:#c4d1d6}
+.site-foot .wrap{padding:40px clamp(20px,5vw,44px);display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:flex-start}
+.site-foot .wm{color:#fff;font-size:17px}
+.site-foot .wm span{color:var(--cream)}
+.foot-meta{font-size:12.5px;color:#93a6ac;line-height:1.8;text-align:right}
+.foot-note{width:100%;border-top:1px solid rgba(255,255,255,.1);padding-top:16px;color:#9fb2b9;
+  font-size:11.5px;color:#7f9298;line-height:1.6}
+@media(max-width:560px){.site-foot .wrap{flex-direction:column}.foot-meta{text-align:left}}
+
+/* identity-shift strip (pillar 01) */
+.idflow{margin-top:24px;background:var(--paper);border:1px solid #e3e6e6;border-radius:12px;padding:16px 18px}
+.idflow-label{font-size:10.5px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:var(--sage);margin-bottom:12px}
+.idflow-row{display:flex;align-items:stretch;gap:12px}
+@media(max-width:520px){.idflow-row{flex-direction:column}}
+.idnode{flex:1;border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:3px}
+.idnode.sa{background:#f3ecd8;border:1px solid #e7dabb}
+.idnode.fph{background:#eaf3f7;border:1px solid #d3e4ec}
+.idk{font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--bronze-d)}
+.idnode.fph .idk{color:var(--slate)}
+.idv{font-weight:800;font-size:14.5px;color:var(--ink);letter-spacing:-.01em;line-height:1.35}
+.idarrow{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:0 4px;min-width:88px;max-width:150px}
+.idarrow span{font-size:10.5px;color:var(--muted);font-weight:500}
+.idarrow strong{font-size:12.5px;color:var(--bronze);font-weight:800;line-height:1.2;margin-top:2px}
+.idarrow::before{content:"";display:block;height:2px;width:100%;background:linear-gradient(90deg,#e7dabb,#d3e4ec);margin-bottom:8px;border-radius:2px}
+.idarrow::after{content:"";display:block;height:2px;width:100%;background:linear-gradient(90deg,#e7dabb,#d3e4ec);margin-top:8px;border-radius:2px}
+@media(max-width:520px){
+  .idarrow{padding:2px 0;text-align:center}
+  .idarrow::before,.idarrow::after{height:16px;width:2px;margin:0 auto 8px;background:linear-gradient(180deg,#e7dabb,#d3e4ec)}
+  .idarrow::after{margin:8px auto 0}
+  .idnode{text-align:center}
+}
+
+/* offer calculator */
+.calc{background:#fff;border-top:1px solid #e6e9e9;border-bottom:1px solid #e6e9e9}
+.calc .wrap{padding:clamp(46px,6vw,70px) clamp(20px,5vw,44px)}
+.calc h2{font-weight:900;font-size:clamp(26px,4vw,38px);letter-spacing:-.02em;color:var(--slate);margin-top:12px;text-wrap:balance}
+.calc .lede{color:var(--muted);font-weight:500;font-size:16.5px;margin-top:12px;max-width:44em}
+.calc-inputs{margin-top:26px;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.field label{display:block;font-size:11px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--sage);margin-bottom:6px}
+.field input{width:100%;font-family:inherit;font-size:15.5px;font-weight:600;padding:11px 12px;
+  border:1.5px solid #d4dadb;border-radius:10px;background:var(--paper);color:var(--ink);
+  font-variant-numeric:tabular-nums}
+.field input:focus{outline:none;border-color:var(--bronze);background:#fff}
+.calc-base{margin-top:18px;font-size:15px;font-weight:600;color:var(--slate)}
+.calc-base strong{color:var(--bronze);font-variant-numeric:tabular-nums}
+.calc-base.bad{color:#a04b3c}
+.calc-tablewrap{margin-top:16px;overflow-x:auto;border:1px solid #e6e9e9;border-radius:12px}
+.swipe-hint{display:none;font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--sage);margin-top:14px}
+@media(max-width:700px){.swipe-hint{display:block}.calc-tablewrap{margin-top:8px}}
+.calc-table{width:100%;border-collapse:collapse;min-width:640px}
+.calc-table th{font-size:10.5px;font-weight:800;letter-spacing:.11em;text-transform:uppercase;color:var(--sage);
+  text-align:right;padding:12px 14px;background:var(--paper);border-bottom:1px solid #e6e9e9;white-space:nowrap}
+.calc-table th:first-child{text-align:left}
+.calc-table td{padding:11px 14px;font-size:14px;color:#3a474d;text-align:right;border-bottom:1px solid #eef1f1;
+  font-variant-numeric:tabular-nums;white-space:nowrap}
+.calc-table td:first-child{text-align:left;font-weight:700;color:var(--ink)}
+.calc-table td .sub{display:block;font-size:11px;font-weight:500;color:var(--muted);white-space:nowrap}
+.calc-table tr:last-child td{border-bottom:none}
+.calc-table tr.baseline td{background:#f6f8f8;font-weight:700}
+.risk{display:inline-block;font-size:11.5px;font-weight:800;padding:4px 10px;border-radius:999px;letter-spacing:.02em}
+.risk.safe{background:#e2efe4;color:#2f6b40}
+.risk.mod{background:#f3ecd8;color:#8a6a2f}
+.risk.risky{background:#f6e3d3;color:#a05a2c}
+.risk.neg{background:#f4dcd7;color:#a03a2c}
+.calc-rec{margin-top:16px;background:#faf6ec;border:1px solid #efe6cf;border-radius:12px;padding:15px 18px;
+  font-size:14.5px;color:#4a4230;font-weight:500}
+.calc-rec b{color:var(--bronze-d)}
+.calc-note{margin-top:12px;font-size:11.5px;color:var(--muted)}
+.map-grid{margin-top:26px;display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:12px}
+.map-card{background:var(--paper);border:1px solid #e3e6e6;border-radius:12px;padding:15px 16px}
+.map-card .m-type{font-weight:800;font-size:14.5px;color:var(--slate)}
+.map-card .m-off{font-size:12.5px;color:#4b585e;margin-top:6px;font-weight:500;line-height:1.5}
+.map-card .m-ass{font-size:11.5px;color:var(--bronze-d);margin-top:8px;font-style:italic}
+
+/* fear section */
+.fear{background:#faf6ec;border-top:1px solid #efe6cf;border-bottom:1px solid #efe6cf}
+.fear .wrap{padding:clamp(38px,5vw,58px) clamp(20px,5vw,44px)}
+.f-eye{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--bronze-d)}
+.f-title{font-weight:900;font-size:clamp(23px,3.4vw,34px);color:var(--slate);letter-spacing:-.015em;
+  margin-top:12px;max-width:17em;text-wrap:balance}
+.f-body{margin-top:14px;font-size:17px;color:#4a4230;max-width:44em;font-weight:500}
+
+/* credibility band */
+.cred{background:var(--paper)}
+.cred .wrap{padding:clamp(30px,4vw,46px) clamp(20px,5vw,44px)}
+.cred-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(20px,4vw,48px);align-items:center}
+@media(max-width:760px){.cred-grid{grid-template-columns:1fr;gap:24px}}
+.cred-lead{margin-top:10px;font-size:18px;font-weight:600;color:var(--slate);max-width:20em;letter-spacing:-.01em}
+.cred-stats{display:flex;gap:14px;flex-wrap:wrap}
+.stat{flex:1 1 130px;background:var(--card);border:1px solid #e6e9e9;border-radius:12px;padding:16px 18px}
+.s-num{display:block;font-weight:900;font-size:clamp(21px,5.8vw,26px);color:var(--bronze);letter-spacing:-.02em;font-variant-numeric:tabular-nums;white-space:nowrap}
+.s-lab{display:block;font-size:12.5px;color:var(--muted);margin-top:4px;font-weight:500;line-height:1.4}
+
+/* capture form */
+.capture{margin-top:22px;border-top:1px solid var(--grey);padding-top:20px}
+.cap-label{display:block;font-weight:700;font-size:15px;color:var(--ink);margin-bottom:10px}
+.cap-row{display:flex;gap:10px;flex-wrap:wrap}
+.cap-input{flex:1 1 240px;min-width:0;font-family:inherit;font-size:15.5px;padding:13px 15px;
+  border:1.5px solid #d4dadb;border-radius:10px;background:#fff;color:var(--ink)}
+.cap-input:focus{outline:none;border-color:var(--bronze)}
+.cap-note{font-size:12.5px;color:var(--muted);margin-top:9px}
+.cap-note.ok{color:#3f7a55;font-weight:600}
+.btn.ghost{background:transparent;color:var(--slate);border:1.5px solid #cfd6d7}
+.btn.ghost:hover{background:var(--grey)}
+.cta{margin-top:18px;align-items:center}
+
+/* hero disclaimer + calc help */
+.disclaim{font-size:12.5px;color:#c6d7de;margin-top:10px;font-weight:500}
+.est-mobile{display:none;font-size:10px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:rgba(192,215,225,.75);margin-top:26px}
+@media(max-width:900px){.est-mobile{display:block}}
+.calc-help{margin-top:12px;font-size:13px;color:var(--muted);background:var(--paper);
+  border:1px solid #e3e6e6;border-radius:10px;padding:11px 14px;max-width:46em;font-weight:500}
+
+/* diagnostic anchors */
+.d-labelblock{display:flex;flex-direction:column;gap:4px;min-width:0}
+.d-hint{display:flex;gap:14px;flex-wrap:wrap;font-size:11px;color:#9fb4bc;font-weight:500}
+@media(max-width:620px){.d-hint{flex-direction:column;gap:2px}}
+
+/* proof band */
+.proofband{background:#faf6ec;border-top:1px solid #efe6cf;border-bottom:1px solid #efe6cf}
+.proofband .wrap{padding:clamp(42px,5.5vw,62px) clamp(20px,5vw,44px)}
+.pb-title{font-weight:900;font-size:clamp(24px,3.8vw,34px);letter-spacing:-.02em;color:var(--slate);margin-top:12px}
+.pb-grid{margin-top:22px;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
+.pb-card{margin:0;background:var(--card);border:1px solid #ece4cf;border-radius:14px;padding:20px 20px 18px;
+  display:flex;flex-direction:column;gap:12px;position:relative}
+.pb-card::before{content:"\201C";position:absolute;top:6px;right:16px;font-size:52px;font-weight:900;
+  color:var(--cream);line-height:1}
+.pb-card p{font-size:15px;font-weight:600;color:#3a474d;line-height:1.55;position:relative;z-index:1}
+.pb-card footer{margin-top:auto;font-size:12.5px;color:var(--muted);font-weight:500}
+.pb-card footer b{color:var(--bronze-d);font-weight:800}
+.vid-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
+@media(max-width:700px){.vid-grid{grid-template-columns:1fr}}
+.vid-card video{width:100%;aspect-ratio:16/9;border-radius:12px;background:#000;display:block}
+.vid-cap{font-size:13px;font-weight:600;color:#4a5a61;margin-top:8px}
+.vid-cap b{color:var(--bronze-d)}
+.pb-note{margin-top:14px;font-size:11.5px;color:var(--sage)}
+
+/* ladder */
+.ladder{background:var(--paper)}
+.ladder .wrap{padding:clamp(44px,6vw,66px) clamp(20px,5vw,44px)}
+.l-title{font-weight:900;font-size:clamp(26px,4vw,36px);letter-spacing:-.02em;color:var(--slate);margin-top:12px}
+.l-grid{margin-top:24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.l-card{background:var(--card);border:1px solid #e6e9e9;border-radius:14px;padding:20px 20px 22px}
+.l-card.hot{background:var(--slate);border-color:var(--slate);color:#eaf0f1;position:relative}
+.l-card.hot::before{content:"Most founders start here";position:absolute;top:-11px;left:16px;
+  background:var(--bronze);color:#fff;font-size:10.5px;font-weight:800;letter-spacing:.08em;
+  text-transform:uppercase;padding:4px 10px;border-radius:999px}
+.l-stage{font-weight:800;font-size:17px;letter-spacing:-.01em}
+.l-card:not(.hot) .l-stage{color:var(--slate)}
+.l-range{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--sage);margin-top:3px;font-variant-numeric:tabular-nums}
+.l-card.hot .l-range{color:var(--cream)}
+.l-card p{font-size:14px;font-weight:500;margin-top:12px;color:#4b585e;line-height:1.55}
+.l-card.hot p{color:#dfe8ec}
+.l-card.hot b{color:#fff}
+.l-honest{margin-top:20px;font-size:14.5px;color:var(--muted);font-weight:500;max-width:46em}
+.l-cta{margin-top:18px}
+
+/* global polish */
+html{scroll-behavior:smooth}
+section[id]{scroll-margin-top:72px}
+.x61 ::selection{background:var(--cream);color:var(--slate-dd)}
+#scrollbar{position:fixed;top:0;left:0;height:3px;width:0;background:var(--bronze);z-index:99}
+.d-progress{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--blue);margin:24px 0 10px}
+.d-progress b{color:var(--cream)}
+.score{transition:background .13s,transform .13s,border-color .13s,box-shadow .13s}
+.score[aria-pressed="true"]{box-shadow:0 4px 14px rgba(184,128,87,.35);transform:translateY(-1px)}
+
+:focus-visible{outline:2.5px solid var(--bronze);outline-offset:2px;border-radius:4px}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}
+  .reveal{opacity:1;transform:none}}
+</style>
+
+<div class="x61">
+  <header class="topbar"><div class="wrap">
+    <img class="wm-img" src="https://bitbranding.co/cdn/shop/files/bitbranding-logo-white.png?v=1713150617&width=400" alt="BitBranding">
+    <div class="method">The 6x1 Method&trade;</div>
+  </div></header>
+
+  <section class="hero">
+    <div class="hero-ghost" aria-hidden="true">6x1</div>
+    <div class="side-label" aria-hidden="true">Est. 2015 &mdash; Allen, Texas</div>
+    <div class="wrap">
+    <div class="eyebrow">The focus formula for clothing brands</div>
+    <h1 class="h-title">The 6x1 Method<span class="tm">&trade;</span></h1>
+    <div class="h-sub">Six Ones. One Year.</div>
+    <div class="h-rule"></div>
+    <p class="h-tag">The simplified path clothing brands use to get to $100K months. Six ones: one audience, one message, one offer, one product, one traffic source, held for one year.</p>
+    <div class="proof">
+      <div class="big">$3K&nbsp;/&nbsp;month <em>to</em> $80K&nbsp;/&nbsp;month</div>
+      <div class="cap">Coco Pina stopped selling everything and went all in on one dress. Less than twelve months later: better margins, faster shipping, and sold out. Now pushing $100K.</div>
+      <div class="disclaim">Results aren&rsquo;t typical. They depend on your product, your market, and how hard you run the playbook.</div>
+    <div class="est-mobile">Est. 2015 &mdash; Allen, Texas</div>
+    </div>
+  </div></section>
+
+  <div class="marquee" aria-hidden="true"><div class="marquee-track">
+    <span>One Audience</span><i>&bull;</i><span>One Message</span><i>&bull;</i><span>One Offer</span><i>&bull;</i><span>One Product</span><i>&bull;</i><span>One Traffic Source</span><i>&bull;</i><span>One Year</span><i>&bull;</i>
+    <span>One Audience</span><i>&bull;</i><span>One Message</span><i>&bull;</i><span>One Offer</span><i>&bull;</i><span>One Product</span><i>&bull;</i><span>One Traffic Source</span><i>&bull;</i><span>One Year</span><i>&bull;</i>
+    <span>One Audience</span><i>&bull;</i><span>One Message</span><i>&bull;</i><span>One Offer</span><i>&bull;</i><span>One Product</span><i>&bull;</i><span>One Traffic Source</span><i>&bull;</i><span>One Year</span><i>&bull;</i>
+    <span>One Audience</span><i>&bull;</i><span>One Message</span><i>&bull;</i><span>One Offer</span><i>&bull;</i><span>One Product</span><i>&bull;</i><span>One Traffic Source</span><i>&bull;</i><span>One Year</span><i>&bull;</i>
+  </div></div>
+
+  <nav class="pathwrap" aria-label="The six pillars"><div class="wrap">
+    <div class="path"><a class="chip" href="#p01"><span class="chip-n">01</span>One Audience</a><a class="chip" href="#p02"><span class="chip-n">02</span>One Message</a><a class="chip" href="#p03"><span class="chip-n">03</span>One Offer</a><a class="chip" href="#p04"><span class="chip-n">04</span>One Product</a><a class="chip" href="#p05"><span class="chip-n">05</span>One Traffic Source</a><a class="chip" href="#p06"><span class="chip-n">06</span>One Year</a></div>
+  </div></nav>
+
+  <section class="intro"><div class="wrap">
+    <div class="eyebrow">The mistake</div>
+    <h2>&ldquo;More products means more chances to win.&rdquo; That&rsquo;s the lie.</h2>
+    <p>A new hoodie, a new tee, a new drop every six weeks. All it really buys you: <b>more confusion, more diluted ad spend, more inventory risk.</b> And the part that stings? <b>One product in your Shopify dashboard is already outperforming everything else.</b> Here&rsquo;s the whole system.</p>
+  </div></section>
+
+  <section class="fear"><div class="wrap">
+    <div class="f-eye">The fear</div>
+    <h2 class="f-title">&ldquo;It seems too simple. Won&rsquo;t I leave money on the table?&rdquo;</h2>
+    <p class="f-body">This fear stops almost everyone. It took Coco Pina nearly a year to get past it. The truth: try to be everything to everyone and <b>you&rsquo;re invisible to the people who would actually love you.</b> Going specific isn&rsquo;t leaving customers behind. <b>It&rsquo;s giving your best customers a reason to choose you.</b></p>
+  </div></section>
+
+  <main class="pillars">
+    <section class="pillar" id="p01">
+      <div class="p-ghost" aria-hidden="true">01</div>
+      <div class="wrap">
+        <div class="p-head">
+          <div class="p-num">01</div>
+          <div><div class="eyebrow">One Audience</div><h2 class="p-q">How do I find my one audience?</h2></div>
+        </div>
+        <div class="p-grid">
+          <div class="p-main">
+            <p class="p-what">Forget the made-up avatar. Nobody connects with a fake person. Your real avatar is an older version of <b>you</b>, the one who struggled with the exact thing your brand now solves. We call it the <b>Struggling Avatar</b>, and when you nail it, your audience feels like you&rsquo;re reading their mind.</p>
+            <div class="p-howlabel">How to do it</div>
+            <ol class="p-how"><li>Start with you. You were your customer before you started this brand. If you weren&rsquo;t, borrow your favorite customer&rsquo;s story. Just don&rsquo;t invent somebody.</li><li>Write down the struggles and feelings from back then. Tired of cheap clothes falling apart. Overwhelmed. Nostalgic. Working hard and feeling unseen.</li><li>Find the identity underneath (mom, athlete, creative) and pair it with the feeling. That&rsquo;s your Struggling Avatar.</li><li>Now flip it. Who does she want to become? That&rsquo;s your <b>Future Paced Hero</b>. Same person, other side of the transformation.</li><li>Bridge the two with your <b>Unique Solution</b>: 3 to 5 things only your brand does. Quick test: if 10 other brands in your niche would say the same things, it&rsquo;s not unique yet.</li></ol>
+          <div class="idflow">
+            <div class="idflow-label">The identity shift &middot; This Is My House Dress</div>
+            <div class="idflow-row">
+              <div class="idnode sa"><span class="idk">Struggling Avatar</span><span class="idv">Fast-Fashion-Tired Millennial</span></div>
+              <div class="idarrow"><span>bridged by their</span><strong>one nostalgic, made-to-keep dress</strong></div>
+              <div class="idnode fph"><span class="idk">Future Paced Hero</span><span class="idv">Slowed-Down, Quality-First Woman</span></div>
+            </div>
+          </div>
+          </div>
+          <aside class="p-side">
+            <div class="callout apparel"><div class="c-label">Apparel lens</div><p>Clothing is identity. When your messaging gets specific enough, her subconscious goes &ldquo;that&rsquo;s me&rdquo; before she&rsquo;s even thought about it. That&rsquo;s the whole game.</p></div>
+            <div class="callout wild"><div class="c-label">In the wild</div><p>This Is My House Dress nailed this: millennial women tired of fast fashion, missing the quality their moms and grandmas had. They didn&rsquo;t need a bigger audience. They needed to stop serving every audience.</p></div>
+            <div class="callout signal"><div class="c-label">You&rsquo;ve got it when</div><p>Your customers start using the identity themselves, without you ever asking them to.</p></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+    <section class="pillar alt" id="p02">
+      <div class="p-ghost" aria-hidden="true">02</div>
+      <div class="wrap">
+        <div class="p-head">
+          <div class="p-num">02</div>
+          <div><div class="eyebrow">One Message</div><h2 class="p-q">How do I create a clear message?</h2></div>
+        </div>
+        <div class="p-grid">
+          <div class="p-main">
+            <p class="p-what">People don&rsquo;t buy products. <b>They buy what the product says about them.</b> Your job isn&rsquo;t to describe the hoodie. It&rsquo;s to put words to who she&rsquo;s becoming. You build that voice in three layers: tone, language, and perspective.</p>
+            <div class="p-howlabel">How to do it</div>
+            <ol class="p-how"><li>Set the tone: pick 5 adjectives that match your hero&rsquo;s energy (empowering, candid, playfully rebellious). You&rsquo;re not writing a press release.</li><li>Talk like her inner voice, then add the hero&rsquo;s clarity. Not &ldquo;look good, feel good&rdquo; but &ldquo;show up sharp, no second-guessing.&rdquo; Not &ldquo;new drop live&rdquo; but &ldquo;for the ones done hiding their taste.&rdquo;</li><li>Plant your flag: what do you believe about style? What do you reject about this industry? What are you inviting people into? Write two micro-mantras you can reuse across content and drops.</li><li>Find the belief keeping her stuck (&ldquo;nothing ever fits me right,&rdquo; &ldquo;quality means designer prices&rdquo;) and hand her a better read of the same facts. A shifted belief creates demand. A feature list just fills the feed.</li><li>Say it the same way everywhere: ads, captions, emails, homepage. Then audit your last three posts. Do they sound like your hero, or like everyone else&rsquo;s brand?</li></ol>
+          </div>
+          <aside class="p-side">
+            <div class="callout apparel"><div class="c-label">Apparel lens</div><p>Nobody needs another hoodie. She&rsquo;s buying what the hoodie says about her. Identity beats features in clothing, every single time.</p></div>
+            <div class="callout wild"><div class="c-label">In the wild</div><p>This Is My House Dress ran on slow fashion: quality over quantity, made to keep. Laces runs the same play for guys: one athletic Bay Area identity on two hero hats, said the same way on every drop.</p></div>
+            <div class="callout signal"><div class="c-label">You&rsquo;ve got it when</div><p>A customer repeats your message back to you in her own words. That&rsquo;s when you know it landed.</p></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+    <section class="pillar" id="p03">
+      <div class="p-ghost" aria-hidden="true">03</div>
+      <div class="wrap">
+        <div class="p-head">
+          <div class="p-num">03</div>
+          <div><div class="eyebrow">One Offer</div><h2 class="p-q">How do I create an amazing offer?</h2></div>
+        </div>
+        <div class="p-grid">
+          <div class="p-main">
+            <p class="p-what"><b>An offer is not a discount.</b> It&rsquo;s the promise, the price framing, the risk removal, and the reason to buy today. And every single promo gets run through the math <b>before</b> it runs on Meta. No exceptions.</p>
+            <div class="p-howlabel">How to do it</div>
+            <ol class="p-how"><li>Know your numbers: AOV, product cost, fees, shipping, returns, and what it costs to get a customer. That gives you your real profit per order, the number every offer lives or dies by.</li><li>Model the promo before you launch it. How many extra orders does it need just to break even? Under 15% more, you&rsquo;re safe. Over 40%, that&rsquo;s risky. If profit goes negative, it&rsquo;s list-building, not a sale.</li><li>Reach for value-add before percent-off: a discount gated at a higher spend, a gift with purchase, Buy 3 Get 1. These protect your margin and raise order size at the same time.</li><li>Make the promise bigger and the price feel smaller: not &ldquo;a comfortable tee&rdquo; but &ldquo;the tee that makes every other shirt in your closet irrelevant.&rdquo; For less than brunch for two.</li><li>Kill the &ldquo;yeah, but&rdquo;: size confidence, free exchanges, quality proof. Then add a digital bonus, like a style-it-5-ways guide, so the first order starts a relationship instead of ending one.</li></ol>
+          </div>
+          <aside class="p-side">
+            <div class="callout apparel"><div class="c-label">Apparel lens</div><p>Apparel buyers hesitate on fit, quality, and risk. And they compare your price to brunch and Uber rides, not to other dresses. Your offer&rsquo;s job is to dissolve the hesitation and win that comparison.</p></div>
+            <div class="callout wild"><div class="c-label">In the wild</div><p>A flat 20% off can need 37% more orders just to break even. A $10 gift with purchase can break even with zero lift. Same &ldquo;generosity,&rdquo; completely different business. Math first, creativity second.</p></div>
+            <div class="callout signal"><div class="c-label">You&rsquo;ve got it when</div><p>You can say exactly how many orders your next promo needs to break even, before it goes live.</p></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+    <section class="pillar alt" id="p04">
+      <div class="p-ghost" aria-hidden="true">04</div>
+      <div class="wrap">
+        <div class="p-head">
+          <div class="p-num">04</div>
+          <div><div class="eyebrow">One Product</div><h2 class="p-q">How do I find my winning product?</h2></div>
+        </div>
+        <div class="p-grid">
+          <div class="p-main">
+            <p class="p-what">You don&rsquo;t need twenty products. You need the one your customers already love, and <b>it&rsquo;s almost always sitting in your data right now.</b></p>
+            <div class="p-howlabel">How to do it</div>
+            <ol class="p-how"><li>Open your Shopify reports and sort by units sold, add-to-cart rate, and conversion rate. One product is already beating everything else.</li><li>Check your Instagram saves and shares. A save is the most honest signal there is, especially before you have a lot of sales.</li><li>Look at your repeat buyers. They voted with their wallet twice. Whatever they came back for, that&rsquo;s your one.</li><li>Boutique owner? Your One isn&rsquo;t a single SKU, it&rsquo;s the category you own. Be THE place for dresses, or denim, or gameday. Same rule, one level up.</li><li>Now pressure-test it: list your top competitor&rsquo;s weaknesses and check honestly whether your product shares them. If it does, keep working, because a superior product is the ultimate weapon. If it doesn&rsquo;t, write the claims that make yours the obvious choice, and make them loud.</li></ol>
+          </div>
+          <aside class="p-side">
+            <div class="callout apparel"><div class="c-label">Apparel lens</div><p>Buying deep on one product (even one style in two colors) unlocks better margins, better inventory control, and faster shipping. Volume drives your cost down and simplicity speeds everything up.</p></div>
+            <div class="callout wild"><img class="c-img" src="https://cdn.shopify.com/s/files/1/0636/6101/5273/files/cocopina-DRSMA2501-aria-3x4-Bali-Blue-14.jpg?v=1778989626&width=560" alt="Coco Pina&rsquo;s hero dress" loading="lazy"><div class="c-label">In the wild</div><p>Coco Pina was one dress away the whole time. More clicks, more saves, more repeat buyers, and it was already selling out. Everything else was noise. The dress was the signal.</p></div>
+            <div class="callout signal"><div class="c-label">You&rsquo;ve got it when</div><p>You can name the one product you&rsquo;d put your full ad budget, content, and homepage behind, and your spend actually proves it.</p></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+    <section class="pillar" id="p05">
+      <div class="p-ghost" aria-hidden="true">05</div>
+      <div class="wrap">
+        <div class="p-head">
+          <div class="p-num">05</div>
+          <div><div class="eyebrow">One Traffic Source</div><h2 class="p-q">How do I figure out my traffic source?</h2></div>
+        </div>
+        <div class="p-grid">
+          <div class="p-main">
+            <p class="p-what"><b>One channel, mastered, before you touch another.</b> For most clothing brands that&rsquo;s Meta. When you split your budget five ways, you don&rsquo;t have enough data anywhere to make one good decision.</p>
+            <div class="p-howlabel">How to do it</div>
+            <ol class="p-how"><li>Pick the single channel where your audience already spends her time, and commit. Go broad on targeting and let clean data build.</li><li>Anchor every test to an evergreen, deep-in-stock product (something you can run for months) and a profit-safe offer: gated, bundle, or Buy 3 Get 1. Not a flat percent-off.</li><li>Test concepts, not one-off ads: 3 styles at a time from the proven formats (UGC, before &amp; after, us vs. them, founder story, carousels), 6 to 8 creatives per round.</li><li>Run the cut cadence: days 2 to 4, watch. Days 5 to 7, kill anything above your normal cost per purchase, keep the profitable winners, and push those winning ads into prospecting.</li><li>Then iterate the winners. A winning concept has countless executions. Your job is to keep lowering cost per purchase, not to go find a new channel.</li></ol>
+          </div>
+          <aside class="p-side">
+            <div class="callout apparel"><div class="c-label">Apparel lens</div><p>We see brands at $200K and even $300K a month still split too thin across platforms, and they can&rsquo;t make one confident profit decision. One clean source with a testing rhythm beats five noisy ones.</p></div>
+            <div class="callout wild"><img class="c-img" src="https://cdn.shopify.com/s/files/1/0729/9029/4234/files/14.png?v=1773886574&width=560" alt="Laces&rsquo; Bay Area Downside Up hat" loading="lazy"><div class="c-label">In the wild</div><p>The traffic source we use with most clothing brand clients is Meta. Laces built their whole engine there: one channel, two hero hats, learned deeply, fed by a weekly creative-testing cadence.</p></div>
+            <div class="callout signal"><div class="c-label">You&rsquo;ve got it when</div><p>You&rsquo;ve got one channel, clean data, a weekly testing rhythm, and winners you&rsquo;re iterating instead of abandoning.</p></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+    <section class="pillar alt" id="p06">
+      <div class="p-ghost" aria-hidden="true">06</div>
+      <div class="wrap">
+        <div class="p-head">
+          <div class="p-num">06</div>
+          <div><div class="eyebrow">One Year</div><h2 class="p-q">How do I actually stick with it?</h2></div>
+        </div>
+        <div class="p-grid">
+          <div class="p-main">
+            <p class="p-what"><b>A year of learning, not a year of change.</b> And here&rsquo;s the truth nobody tells you: somewhere around month three or four, you&rsquo;re going to freak out. That&rsquo;s normal. It&rsquo;s okay to freak out. What&rsquo;s not okay is pivoting because of a feeling.</p>
+            <div class="p-howlabel">How to do it</div>
+            <ol class="p-how"><li>When the panic hits, don&rsquo;t ask &ldquo;is this working fast enough?&rdquo; Ask &ldquo;are we moving in the right direction?&rdquo; Those are two different questions.</li><li>Check the objective truth once a month: sales trend, cost per purchase, repeat buyers, and whether you actually ran the playbook. Feelings lie. These numbers don&rsquo;t.</li><li>Moving in the right direction? Keep going and get sharper every week. Wrong direction for 2 or 3 months straight? Now a pivot is a decision, not a panic.</li><li>Let it compound: the algorithm learns, your audience grows, your ads get cheaper as your proof builds. Quitting resets all of it to zero.</li></ol>
+          </div>
+          <aside class="p-side">
+            <div class="callout apparel"><div class="c-label">Apparel lens</div><p>Coco Pina almost went back to selling everything. They stayed the course, and $3,000 a month became $80,000 a month. It took a year of learning, not a year of change.</p></div>
+            <div class="callout wild"><div class="c-label">In the wild</div><p>Most founders quit at month three or four. Right before it would&rsquo;ve worked.</p></div>
+            <div class="callout signal"><div class="c-label">You&rsquo;ve got it when</div><p>A year from now you&rsquo;re running a sharper version of the same plan, not a different plan.</p></div>
+          </aside>
+        </div>
+      </div>
+    </section></main>
+
+  <section class="calc" id="calc"><div class="wrap">
+    <div class="eyebrow">Offer calculator</div>
+    <h2>Run the math before you run the promo.</h2>
+    <p class="lede">Drop in your real numbers and see what every common promo does to your profit, and how many extra orders each one needs just to break even. If that lift isn&rsquo;t realistic for your list and your ad budget, don&rsquo;t run it.</p>
+    <p class="calc-help">Don&rsquo;t know a number? Totally normal. Typical starting points for a clothing brand: fees around 6%, shipping + fulfillment $8 to $15, returns $2 to $5 per order, and $25 to $40 to acquire a customer on Meta.</p>
+    <div class="calc-inputs">
+      <div class="field"><label for="cAov">Average order $</label><input id="cAov" type="number" inputmode="decimal" value="125" min="0" step="1"></div>
+      <div class="field"><label for="cCogs">Product cost $</label><input id="cCogs" type="number" inputmode="decimal" value="40" min="0" step="1"></div>
+      <div class="field"><label for="cFee">Fees % of order</label><input id="cFee" type="number" inputmode="decimal" value="6" min="0" max="50" step="0.5"></div>
+      <div class="field"><label for="cShip">Ship + fulfill $</label><input id="cShip" type="number" inputmode="decimal" value="12" min="0" step="1"></div>
+      <div class="field"><label for="cRet">Returns $</label><input id="cRet" type="number" inputmode="decimal" value="2" min="0" step="1"></div>
+      <div class="field"><label for="cCac">Cost per customer $</label><input id="cCac" type="number" inputmode="decimal" value="35" min="0" step="1"></div>
+      <div class="field"><label for="cOrders">Orders / month</label><input id="cOrders" type="number" inputmode="numeric" value="150" min="1" step="1"></div>
+      <div class="field"><label for="cDisc">Discount %</label><input id="cDisc" type="number" inputmode="decimal" value="20" min="0" max="90" step="1"></div>
+      <div class="field"><label for="cGate">Gated min spend $</label><input id="cGate" type="number" inputmode="decimal" value="150" min="0" step="1"></div>
+      <div class="field"><label for="cGift">Gift cost $</label><input id="cGift" type="number" inputmode="decimal" value="10" min="0" step="1"></div>
+    </div>
+    <p class="calc-base" id="calcBase"></p>
+    <div class="swipe-hint" aria-hidden="true">Swipe the table sideways for the full math &rarr;</div>
+    <div class="calc-tablewrap"><table class="calc-table" aria-label="Promo scenarios">
+      <thead><tr><th>Offer</th><th>Customer pays</th><th>Profit / order</th><th>Margin</th><th>Breakeven orders</th><th>Volume lift</th><th>Risk</th></tr></thead>
+      <tbody id="calcRows"></tbody>
+    </table></div>
+    <div class="calc-rec" id="calcRec"></div>
+    <p class="calc-note">Estimates from your inputs. Fees scale with what the customer pays; product costs scale with units shipped. Pair any offer with an assurance the discount does not solve (fit guarantee, easy exchanges, a digital confidence kit).</p>
+    <div class="map-grid">
+      <div class="map-card"><div class="m-type">Boutique</div><div class="m-off">Limited runs, VIP previews, dress + accessory bundles</div><div class="m-ass">&ldquo;Handcrafted in small runs, no restocks.&rdquo;</div></div>
+      <div class="map-card"><div class="m-type">Streetwear</div><div class="m-off">Limited drops, collabs, BOGO hoodies, scarcity plays</div><div class="m-ass">&ldquo;Part of the drop. Once it&rsquo;s gone, it&rsquo;s gone.&rdquo;</div></div>
+      <div class="map-card"><div class="m-type">Athletic</div><div class="m-off">Leggings + top bundles, gear-refresh subscription, free shipping</div><div class="m-ass">&ldquo;Engineered to outlast every workout, guaranteed.&rdquo;</div></div>
+      <div class="map-card"><div class="m-type">Luxury</div><div class="m-off">Premium gift with purchase, concierge and VIP perks</div><div class="m-ass">&ldquo;Lifetime quality with white-glove service.&rdquo;</div></div>
+    </div>
+  </div></section>
+
+  <section class="cred"><div class="wrap">
+    <div class="cred-grid">
+      <div>
+        <div class="eyebrow">Who is behind this</div>
+        <p class="cred-lead">Aaron Pearson and Christian Pinon have spent 10+ years doing one thing: helping clothing brands grow online. Nobody else.</p>
+      </div>
+      <div class="cred-stats">
+        <div class="stat"><span class="s-num">300+</span><span class="s-lab">clothing brands in the last 12 months</span></div>
+        <div class="stat"><span class="s-num">$5K&ndash;7&nbsp;fig</span><span class="s-lab">per month, the range we work across</span></div>
+        <div class="stat"><span class="s-num">10+ yrs</span><span class="s-lab">working only with clothing brands</span></div>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="proofband"><div class="wrap">
+    <div class="eyebrow">From inside OSO</div>
+    <h2 class="pb-title">Founders running the playbook.</h2>
+    <div class="pb-grid">
+      <blockquote class="pb-card">
+        <p>&ldquo;We had our first 10K month last month (in fact $11.5k). Letttttttt&rsquo;sss GOOOOO.&rdquo;</p>
+        <footer><b>Elizabeth</b> &middot; Buff Bo</footer>
+      </blockquote>
+      <blockquote class="pb-card">
+        <p>&ldquo;I&rsquo;ve only been here three days and I can tell you this is the best community I&rsquo;ve joined&hellip; In three days I&rsquo;ve learned more and done more to my store and ads than I learned in a year. I can see this being the best investment I&rsquo;ve ever made.&rdquo;</p>
+        <footer><b>Jacob Smith</b> &middot; Squad Six Apparel</footer>
+      </blockquote>
+      <blockquote class="pb-card">
+        <p>&ldquo;We&rsquo;re moving in the right direction&hellip; we&rsquo;ve just got to stay laser-focused.&rdquo;</p>
+        <footer><b>Anu</b> &middot; faith-based hat brand, up 40% year over year on one hero product</footer>
+      </blockquote>
+    </div>
+    
+    <div class="vid-grid">
+      <div class="vid-card">
+        <video controls preload="none" poster="poster-ching.jpg" src="testimonial-ching.mp4"></video>
+        <div class="vid-cap"><b>Ching Huang</b> &middot; OSO member</div>
+      </div>
+      <div class="vid-card">
+        <video controls preload="none" poster="poster-robert.jpg" src="testimonial-robert.mp4"></video>
+        <div class="vid-cap"><b>Robert Day</b> &middot; OSO member</div>
+      </div>
+    </div>
+    <p class="pb-note">Real members, real messages. Individual results vary.</p>
+    <div class="cta" style="justify-content:center;margin-top:26px">
+      <a class="btn" href="https://sales.bitbranding.co" target="_blank" rel="noopener">Book your free 45-minute strategy session</a>
+    </div>
+  </div></section>
+
+  <section class="diag"><div class="wrap">
+    <div class="eyebrow">Self-assessment</div>
+    <h2>Score your brand on the 6x1.</h2>
+    <p class="lede">Be honest. Score where your brand actually is today, not where you want it to be, and we&rsquo;ll show you the one thing to fix first. The anchors under each one tell you what a 1 and a 5 really look like.</p>
+    <div class="d-progress" id="dProgress"><b>0</b> of 6 scored</div>
+    <div class="d-rows">
+      <div class="d-row" data-n="01">
+        <div class="d-labelblock">
+          <div class="d-label"><span class="d-num">01</span>One Audience</div>
+          <div class="d-hint"><span>1 = &ldquo;It&rsquo;s for everyone&rdquo;</span><span>5 = Customers call themselves your avatar</span></div>
+        </div>
+        <div class="d-scale" role="group" aria-label="Rate One Audience from 1 to 5"><button type="button" class="score" data-p="01" data-v="1" aria-label="One Audience: 1 out of 5" aria-pressed="false">1</button><button type="button" class="score" data-p="01" data-v="2" aria-label="One Audience: 2 out of 5" aria-pressed="false">2</button><button type="button" class="score" data-p="01" data-v="3" aria-label="One Audience: 3 out of 5" aria-pressed="false">3</button><button type="button" class="score" data-p="01" data-v="4" aria-label="One Audience: 4 out of 5" aria-pressed="false">4</button><button type="button" class="score" data-p="01" data-v="5" aria-label="One Audience: 5 out of 5" aria-pressed="false">5</button></div>
+      </div>
+      <div class="d-row" data-n="02">
+        <div class="d-labelblock">
+          <div class="d-label"><span class="d-num">02</span>One Message</div>
+          <div class="d-hint"><span>1 = Captions announce products</span><span>5 = Customers repeat your message back</span></div>
+        </div>
+        <div class="d-scale" role="group" aria-label="Rate One Message from 1 to 5"><button type="button" class="score" data-p="02" data-v="1" aria-label="One Message: 1 out of 5" aria-pressed="false">1</button><button type="button" class="score" data-p="02" data-v="2" aria-label="One Message: 2 out of 5" aria-pressed="false">2</button><button type="button" class="score" data-p="02" data-v="3" aria-label="One Message: 3 out of 5" aria-pressed="false">3</button><button type="button" class="score" data-p="02" data-v="4" aria-label="One Message: 4 out of 5" aria-pressed="false">4</button><button type="button" class="score" data-p="02" data-v="5" aria-label="One Message: 5 out of 5" aria-pressed="false">5</button></div>
+      </div>
+      <div class="d-row" data-n="03">
+        <div class="d-labelblock">
+          <div class="d-label"><span class="d-num">03</span>One Offer</div>
+          <div class="d-hint"><span>1 = Your only offer is a discount code</span><span>5 = You know breakeven before launch</span></div>
+        </div>
+        <div class="d-scale" role="group" aria-label="Rate One Offer from 1 to 5"><button type="button" class="score" data-p="03" data-v="1" aria-label="One Offer: 1 out of 5" aria-pressed="false">1</button><button type="button" class="score" data-p="03" data-v="2" aria-label="One Offer: 2 out of 5" aria-pressed="false">2</button><button type="button" class="score" data-p="03" data-v="3" aria-label="One Offer: 3 out of 5" aria-pressed="false">3</button><button type="button" class="score" data-p="03" data-v="4" aria-label="One Offer: 4 out of 5" aria-pressed="false">4</button><button type="button" class="score" data-p="03" data-v="5" aria-label="One Offer: 5 out of 5" aria-pressed="false">5</button></div>
+      </div>
+      <div class="d-row" data-n="04">
+        <div class="d-labelblock">
+          <div class="d-label"><span class="d-num">04</span>One Product</div>
+          <div class="d-hint"><span>1 = Launching styles, hoping one hits</span><span>5 = Your hero gets your best budget</span></div>
+        </div>
+        <div class="d-scale" role="group" aria-label="Rate One Product from 1 to 5"><button type="button" class="score" data-p="04" data-v="1" aria-label="One Product: 1 out of 5" aria-pressed="false">1</button><button type="button" class="score" data-p="04" data-v="2" aria-label="One Product: 2 out of 5" aria-pressed="false">2</button><button type="button" class="score" data-p="04" data-v="3" aria-label="One Product: 3 out of 5" aria-pressed="false">3</button><button type="button" class="score" data-p="04" data-v="4" aria-label="One Product: 4 out of 5" aria-pressed="false">4</button><button type="button" class="score" data-p="04" data-v="5" aria-label="One Product: 5 out of 5" aria-pressed="false">5</button></div>
+      </div>
+      <div class="d-row" data-n="05">
+        <div class="d-labelblock">
+          <div class="d-label"><span class="d-num">05</span>One Traffic Source</div>
+          <div class="d-hint"><span>1 = Posting everywhere, a little</span><span>5 = One channel, weekly test rhythm</span></div>
+        </div>
+        <div class="d-scale" role="group" aria-label="Rate One Traffic Source from 1 to 5"><button type="button" class="score" data-p="05" data-v="1" aria-label="One Traffic Source: 1 out of 5" aria-pressed="false">1</button><button type="button" class="score" data-p="05" data-v="2" aria-label="One Traffic Source: 2 out of 5" aria-pressed="false">2</button><button type="button" class="score" data-p="05" data-v="3" aria-label="One Traffic Source: 3 out of 5" aria-pressed="false">3</button><button type="button" class="score" data-p="05" data-v="4" aria-label="One Traffic Source: 4 out of 5" aria-pressed="false">4</button><button type="button" class="score" data-p="05" data-v="5" aria-label="One Traffic Source: 5 out of 5" aria-pressed="false">5</button></div>
+      </div>
+      <div class="d-row" data-n="06">
+        <div class="d-labelblock">
+          <div class="d-label"><span class="d-num">06</span>One Year</div>
+          <div class="d-hint"><span>1 = Pivoting every slow month</span><span>5 = Same playbook 6+ months, sharper</span></div>
+        </div>
+        <div class="d-scale" role="group" aria-label="Rate One Year from 1 to 5"><button type="button" class="score" data-p="06" data-v="1" aria-label="One Year: 1 out of 5" aria-pressed="false">1</button><button type="button" class="score" data-p="06" data-v="2" aria-label="One Year: 2 out of 5" aria-pressed="false">2</button><button type="button" class="score" data-p="06" data-v="3" aria-label="One Year: 3 out of 5" aria-pressed="false">3</button><button type="button" class="score" data-p="06" data-v="4" aria-label="One Year: 4 out of 5" aria-pressed="false">4</button><button type="button" class="score" data-p="06" data-v="5" aria-label="One Year: 5 out of 5" aria-pressed="false">5</button></div>
+      </div></div>
+    <p class="hint" id="hint">Rate all six above to reveal your weakest link.</p>
+    <div class="result hidden" id="result" aria-live="polite">
+      <div class="r-eye">Start here</div>
+      <div class="r-link" id="rLink">&mdash;</div>
+      <div class="r-action" id="rAction"></div>
+      <div class="r-meter">
+        <div class="r-scorine">
+          <span class="r-num" id="rNum">0</span><span class="r-of">/ 30 focus score</span>
+          <span class="r-state" id="rState"></span>
+        </div>
+        <div class="r-bar"><div class="r-fill" id="rFill"></div></div>
+      </div>
+      <form class="capture" id="captureForm" novalidate>
+        <label class="cap-label" for="capEmail">Email me my scorecard and the 6x1 framework</label>
+        <div class="cap-row">
+          <input class="cap-input" id="capEmail" type="email" inputmode="email" autocomplete="email" placeholder="you@yourbrand.com" required>
+          <button class="btn" type="submit">Send it to me</button>
+        </div>
+        <p class="cap-note" id="capNote">Your results plus the full framework. No spam, one-click unsubscribe.</p>
+      </form>
+      <div class="cta">
+        <a class="btn ghost" id="ctaBtn" href="https://sales.bitbranding.co" target="_blank" rel="noopener">Or book a free 45-minute strategy session</a>
+        <small>A real conversation with a real consultant. We find your weakest link and map the fix.</small>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="ladder"><div class="wrap">
+    <div class="eyebrow">Your next step</div>
+    <h2 class="l-title">Meet yourself where you are.</h2>
+    <div class="l-grid">
+      <div class="l-card">
+        <div class="l-stage">Just getting started</div>
+        <div class="l-range">$0 &ndash; $5K / month</div>
+        <p>Binge the YouTube channel. We drop a new video every week, specifically for clothing brand founders. It&rsquo;s free, and it&rsquo;s enough to get you moving.</p>
+      </div>
+      <div class="l-card hot">
+        <div class="l-stage">Growing</div>
+        <div class="l-range">$5K &ndash; $25K / month</div>
+        <p>This is exactly who <b>OSO (Optimized Store Owner)</b> was built for: a 6-month, done-with-you program where we run the 6x1 on your brand together, with our team in your corner.</p>
+      </div>
+      <div class="l-card">
+        <div class="l-stage">Scaling</div>
+        <div class="l-range">$25K+ / month</div>
+        <p>At this point you probably don&rsquo;t need a course, you need hands. That&rsquo;s an agency conversation. Book the call and we&rsquo;ll tell you straight.</p>
+      </div>
+    </div>
+    <p class="l-honest">The strategy session is a real conversation with one of our consultants, not a webinar in disguise. If OSO fits, we&rsquo;ll invite you in. If it doesn&rsquo;t, we&rsquo;ll point you at the right next step and you lose nothing.</p>
+    <div class="l-cta"><a class="btn" href="https://sales.bitbranding.co" target="_blank" rel="noopener">Book your free 45-minute strategy session</a></div>
+  </div></section>
+
+  <footer class="site-foot"><div class="wrap">
+    <div>
+      <img class="wm-img-foot" src="https://bitbranding.co/cdn/shop/files/bitbranding-logo-white.png?v=1713150617&width=400" alt="BitBranding">
+      <div style="font-size:13px;color:#93a6ac;margin-top:10px">Shopify marketing for clothing brands.</div>
+    </div>
+    <div class="foot-meta">
+      Est. 2015 &nbsp;&middot;&nbsp; Allen, Texas<br>
+      bitbranding.co
+    </div>
+    <div class="foot-note">
+      The 6x1 Method&trade; is a trademark of BitBranding. Results referenced are illustrative and not typical; outcomes depend on product, market, execution, and many other factors.
+    </div>
+  </div></footer>
+</div>
+
+<script>
+(function(){
+  var PILLARS = [{"n": "01", "name": "One Audience", "action": "Write your Struggling Avatar from an older version of you (a feeling + an identity), flip it into the Future Paced Hero, and list the 3 to 5 things only your brand does."}, {"n": "02", "name": "One Message", "action": "Write your five tone adjectives and two micro-mantras, then audit your last three posts. Do they sound like your hero, or like everybody else?"}, {"n": "03", "name": "One Offer", "action": "Work out your real profit per order, then model your next promo in the calculator above before it runs. Gated, gift-with-purchase, or Buy 3 Get 1 before any flat percent-off."}, {"n": "04", "name": "One Product", "action": "Open your Shopify reports, sort by units and conversion, and name the one product (or category, if you&rsquo;re a boutique) already beating everything."}, {"n": "05", "name": "One Traffic Source", "action": "Commit to one channel, then launch one structured test: 3 creative concepts on an evergreen product with a profit-safe offer, and cut by cost per purchase on day 7."}, {"n": "06", "name": "One Year", "action": "Put it in writing: one year on this playbook, one monthly check of the objective numbers, and no pivots based on a feeling."}];
+  var scores = {};
+  var hint = document.getElementById('hint');
+  var result = document.getElementById('result');
+
+  function states(n){
+    var s=0, best=null;
+    for(var i=0;i<PILLARS.length;i++){
+      var p=PILLARS[i], v=scores[p.n];
+      if(v==null) return {complete:false};
+      s+=v;
+      if(best===null || v<best.v){ best={p:p, v:v}; } // ties keep earliest = most foundational
+    }
+    return {complete:true, total:s, weak:best};
+  }
+  function label(t){
+    if(t>=25) return 'Strong focus';
+    if(t>=19) return 'Getting focused';
+    if(t>=13) return 'Still scattered';
+    return 'Wide open';
+  }
+  function render(){
+    var r=states();
+    var n=Object.keys(scores).length;
+    var prog=document.getElementById('dProgress');
+    if(prog){ prog.innerHTML='<b>'+n+'</b> of 6 scored'; }
+    if(!r.complete){ result.classList.add('hidden'); hint.classList.remove('gone'); return; }
+    hint.classList.add('gone');
+    document.getElementById('rLink').textContent = r.weak.p.name;
+    document.getElementById('rAction').innerHTML = r.weak.p.action;
+    document.getElementById('rNum').textContent = r.total;
+    document.getElementById('rState').textContent = label(r.total);
+    document.getElementById('rFill').style.width = Math.round(r.total/30*100)+'%';
+    result.classList.remove('hidden');
+  }
+  document.querySelectorAll('.score').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var p=btn.getAttribute('data-p'), v=+btn.getAttribute('data-v');
+      scores[p]=v;
+      btn.parentNode.querySelectorAll('.score').forEach(function(b){
+        b.setAttribute('aria-pressed', b===btn ? 'true':'false');
+      });
+      render();
+    });
+  });
+
+  // ---- offer calculator (BitBranding math engine) ----
+  function $(id){return document.getElementById(id)}
+  function num(id){var v=parseFloat($(id).value);return isFinite(v)?v:0}
+  function fmt$(v){return (v<0?'-$':'$')+Math.abs(v).toFixed(2)}
+  function calc(){
+    var aov=num('cAov'), cogs=num('cCogs'), fee=num('cFee')/100, ship=num('cShip'),
+        ret=num('cRet'), cac=num('cCac'), orders=Math.max(1,num('cOrders')),
+        d=num('cDisc')/100, gate=num('cGate'), gift=num('cGift');
+    function cp(A,C){ return A - (C + A*fee + ship + ret) - cac; }
+    var baseCP=cp(aov,cogs);
+    var baseEl=$('calcBase');
+    if(baseCP<=0){
+      baseEl.textContent='Your baseline contribution profit is '+fmt$(baseCP)+' per order. Fix the unit economics before running any promo.';
+      baseEl.classList.add('bad');
+    } else {
+      baseEl.innerHTML='Baseline: <strong>'+fmt$(baseCP)+'</strong> contribution profit per order ('+Math.round(baseCP/aov*100)+'% of AOV) on '+orders+' orders/month.';
+      baseEl.classList.remove('bad');
+    }
+    var scen=[
+      {name:'Baseline (no offer)', A:aov, C:cogs, base:true},
+      {name:'Flat '+Math.round(d*100)+'% off', A:aov*(1-d), C:cogs},
+      {name:Math.round(d*100)+'% off orders $'+gate+'+', A:gate*(1-d), C:cogs, sub:'basket lifted to $'+gate+' before discount'},
+      {name:'Gift with purchase', A:aov, C:cogs+gift, sub:'full price held, $'+gift+' gift cost'},
+      {name:'BOGO (buy 1 get 1)', A:aov, C:cogs*2, sub:'paid for 1, ship 2'},
+      {name:'Buy 2 get 1', A:aov*2, C:cogs*3, sub:'paid for 2, ship 3'},
+      {name:'Buy 3 get 1', A:aov*3, C:cogs*4, sub:'paid for 3, ship 4'},
+      {name:'BOGO 50% off', A:aov*1.5, C:cogs*2, sub:'2nd item half price'}
+    ];
+    var rows='', best=[];
+    scen.forEach(function(s){
+      var P=cp(s.A,s.C), margin=s.A>0?P/s.A:0, cells;
+      if(s.base){
+        cells='<td>'+s.name+'</td><td>'+fmt$(s.A)+'</td><td>'+fmt$(P)+'</td><td>'+Math.round(margin*100)+'%</td><td>'+orders+'</td><td>&mdash;</td><td>&mdash;</td>';
+        rows+='<tr class="baseline">'+cells+'</tr>'; return;
+      }
+      var beOrders=null, lift=null, risk, cls;
+      if(P<=0 || baseCP<=0){ risk='Unprofitable'; cls='neg'; }
+      else{
+        beOrders=Math.ceil(orders*baseCP/P);
+        lift=(beOrders-orders)/orders;
+        if(lift>0.4){risk='Risky';cls='risky';}
+        else if(lift>0.15){risk='Moderate';cls='mod';}
+        else{risk='Safe';cls='safe'; best.push({n:s.name,l:lift});}
+      }
+      rows+='<tr><td>'+s.name+(s.sub?'<span class="sub">'+s.sub+'</span>':'')+'</td>'
+        +'<td>'+fmt$(s.A)+'</td><td>'+fmt$(P)+'</td><td>'+Math.round(margin*100)+'%</td>'
+        +'<td>'+(beOrders===null?'&mdash;':beOrders)+'</td>'
+        +'<td>'+(lift===null?'&mdash;':(lift>=0?'+':'')+Math.round(lift*100)+'%')+'</td>'
+        +'<td><span class="risk '+cls+'">'+risk+'</span></td></tr>';
+    });
+    $('calcRows').innerHTML=rows;
+    var rec=$('calcRec');
+    if(baseCP<=0){ rec.innerHTML='<b>First move:</b> raise AOV or cut delivery costs until baseline profit is positive. Until then, any promo is list-building spend, not a sale.'; }
+    else if(best.length){
+      best.sort(function(a,b){return a.l-b.l});
+      rec.innerHTML='<b>Safest plays right now:</b> '+best.slice(0,3).map(function(x){return x.n}).join(', ')
+        +'. Run the safest as your main offer, and pair it with an assurance the price does not solve: a fit guarantee, free exchanges, or a digital confidence kit.';
+    } else {
+      rec.innerHTML='<b>Every modeled promo needs a big volume lift at these numbers.</b> Hold price, work the offer with value-adds (gift with purchase at a lower gift cost, gated threshold above your AOV), or improve margin first.';
+    }
+  }
+  ['cAov','cCogs','cFee','cShip','cRet','cCac','cOrders','cDisc','cGate','cGift'].forEach(function(id){
+    var el=$(id); if(el){el.addEventListener('input',calc);}
+  });
+  calc();
+
+  // email capture — HighLevel (LeadConnector) inbound webhook.
+  // Paste the workflow's webhook URL below once the page is on the bitbranding.co
+  // subdomain. Left empty, the form confirms without sending (the claude.ai
+  // artifact host blocks outbound requests, so it can't fire from there anyway).
+  var HIGHLEVEL_WEBHOOK_URL='';
+  var form=document.getElementById('captureForm');
+  if(form){ form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var email=document.getElementById('capEmail');
+    var note=document.getElementById('capNote');
+    var ok=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim());
+    if(!ok){ note.textContent='Enter a valid email so we can send it over.'; note.classList.remove('ok'); email.focus(); return; }
+    var done=function(){
+      note.textContent='On its way. Check your inbox for your 6x1 scorecard.';
+      note.classList.add('ok');
+      email.setAttribute('disabled','true');
+      form.querySelector('button').setAttribute('disabled','true');
+    };
+    if(HIGHLEVEL_WEBHOOK_URL){
+      var payload={email:email.value.trim(),source:'6x1-method-guide',scores:{},total:null,weakest:''};
+      PILLARS.forEach(function(p){ payload.scores[p.n]=(scores[p.n]!=null?scores[p.n]:null); });
+      var r=states();
+      if(r.complete){ payload.total=r.total; payload.weakest=r.weak.p.name; }
+      fetch(HIGHLEVEL_WEBHOOK_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})
+        .then(done).catch(function(){
+          note.textContent='Something hiccuped on our end. Try once more?';
+          note.classList.remove('ok');
+        });
+    } else { done(); }
+  }); }
+
+  // scroll progress bar
+  var sb=document.createElement('div'); sb.id='scrollbar'; document.body.appendChild(sb);
+  var ticking=false;
+  window.addEventListener('scroll',function(){
+    if(ticking) return; ticking=true;
+    requestAnimationFrame(function(){
+      var d=document.documentElement;
+      var max=d.scrollHeight-d.clientHeight;
+      sb.style.width=(max>0?(d.scrollTop||document.body.scrollTop)/max*100:0)+'%';
+      ticking=false;
+    });
+  },{passive:true});
+
+  // tasteful scroll reveal
+  if(!window.matchMedia||!window.matchMedia('(prefers-reduced-motion:reduce)').matches){
+    document.querySelectorAll('.pillar .wrap,.stat,.pb-card,.l-card,.map-card').forEach(function(el){el.classList.add('reveal');});
+    if('IntersectionObserver' in window){
+      var io=new IntersectionObserver(function(es){
+        es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+      },{threshold:.12});
+      document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+    } else { document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');}); }
+  }
+})();
+</script>
+
+</body>
+</html>
